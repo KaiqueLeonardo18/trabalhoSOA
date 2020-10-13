@@ -12,13 +12,15 @@ namespace trabalhoSOA
         public int pages;
         public int escolherAlgoritimo;
         public int faltaPage;
+        public char recomecar;
+
         public void lru(int capacidade, int[] array)
         {
             //Definindo ca capacidade de memória
             int capacity = capacidade;
             int[] arr = array;
             //Criando uma lista com o tamanho inserido pelo input
-            List<int> s = new List<int>(capacity);
+            List<int> s = new List<int>();
             int count = 0;
             //Percorrendo a lista de array 
             foreach (int i in arr)
@@ -48,14 +50,19 @@ namespace trabalhoSOA
             }
             Console.WriteLine("-----------------------------------------------");
             Console.WriteLine("Total de Falhas de páginas: " + faltaPage);
-            Console.ReadLine();
+            Console.WriteLine("-----------------------------------------------\nDeseja utilizar outro algoritmo? 'S' ou 'N'");
+            recomecar = Convert.ToChar(Console.ReadLine());
+        metodos met = new metodos();
+
+            met.recomecarProgama(recomecar);
+            Console.Read();
         }
         public void fifo(int capacidade, int[] array)
         {
             //Definindo ca capacidade de memória
             int cap = capacidade;
             //Criando uma lista com o tamanho inserido pelo input
-            List<int> s = new List<int>(cap);
+            List<int> s = new List<int>();
             //Percorrendo a Fila
             foreach (int i in array)
             {
@@ -72,7 +79,11 @@ namespace trabalhoSOA
             Console.WriteLine("-----------------------------------------------");
             s.RemoveAt(0);
 
-            Console.WriteLine("Total de Falhas de páginas: " + faltaPage + " elementos.");
+            Console.WriteLine("Total de Falhas de páginas: " + faltaPage);
+            Console.WriteLine("-----------------------------------------------\n Deseja utilizar outro algoritmo? 'S' ou 'N'");
+            recomecar = Convert.ToChar(Console.ReadLine());
+            metodos met = new metodos();
+            met.recomecarProgama(recomecar);
             Console.Read();
         }
 
@@ -81,7 +92,7 @@ namespace trabalhoSOA
             //Definindo ca capacidade de memória
             cap = capacidade;
             //Criando uma lista com o tamanho inserido pelo input
-            List<int> s = new List<int>(cap);
+            List<int> s = new List<int>();
             //Percorrendo a Pilha
             foreach (int i in array)
             {
@@ -100,8 +111,13 @@ namespace trabalhoSOA
                 }
             }
             Console.WriteLine("-----------------------------------------------");
-            Console.WriteLine("Total de Falhas de páginas: " + faltaPage + " elementos.");
+            Console.WriteLine("Total de Falhas de páginas: " + faltaPage);
+            Console.WriteLine("-----------------------------------------------\n Deseja utilizar outro algoritmo? 'S' ou 'N'");
+            recomecar = Convert.ToChar(Console.ReadLine());
+            metodos met = new metodos();
+            met.recomecarProgama(recomecar);
 
+            Console.Read();
         }
 
     }

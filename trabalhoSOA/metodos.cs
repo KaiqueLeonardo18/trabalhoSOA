@@ -15,19 +15,18 @@ namespace trabalhoSOA
         {
             Console.WriteLine("\nInsira o conjunto de páginas desejado, é necessário que insira um número por vez.");
             alg.cap = capacidade;
-            List<int> s = new List<int>(alg.cap);
-            for (int i = 0; i < alg.cap; i++)
+            try
             {
-                if (!Int32.TryParse(Console.ReadLine(), out alg.pages))
-                {
-                    Console.WriteLine("\nPor favor, insira um número válido.");
-                    getPage(capacidade);
-                }
-                s.Add(alg.pages);
+                string arraySplit = Console.ReadLine();
+                string[] arrayList = arraySplit.Split(',');
+                int[] array = Array.ConvertAll<string,int>(arrayList, int.Parse);
+                getAlgoritmo(capacidade, array);
             }
-            int[] array = s.ToArray();
-            getAlgoritmo(capacidade, array);
-
+            catch (Exception ex)
+            {
+                Console.WriteLine("Ocoreu um erro! Tente novamente");
+                Console.ReadLine();
+            }
         }
 
         public void getAlgoritmo(int cap, int[] array)
@@ -74,5 +73,17 @@ namespace trabalhoSOA
             getPage(alg.cap);
         }
 
+        public void recomecarProgama(char valor)
+        {
+            if (valor == 'S' || valor == 's')
+            {
+                prog.Main1();
+            }
+            else
+            {
+                Console.WriteLine("Até mais!");
+                Console.Read();
+            }
+        }
     }
 }
