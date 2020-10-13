@@ -1,0 +1,7 @@
+C:\Users\User\source\repos\trabalhoSOA\trabalhoSOA\bin\Debug\trabalhoSOA.exe.config
+C:\Users\User\source\repos\trabalhoSOA\trabalhoSOA\bin\Debug\trabalhoSOA.exe
+C:\Users\User\source\repos\trabalhoSOA\trabalhoSOA\bin\Debug\trabalhoSOA.pdb
+C:\Users\User\source\repos\trabalhoSOA\trabalhoSOA\obj\Debug\trabalhoSOA.csprojAssemblyReference.cache
+C:\Users\User\source\repos\trabalhoSOA\trabalhoSOA\obj\Debug\trabalhoSOA.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\trabalhoSOA\trabalhoSOA\obj\Debug\trabalhoSOA.exe
+C:\Users\User\source\repos\trabalhoSOA\trabalhoSOA\obj\Debug\trabalhoSOA.pdb
