@@ -13,7 +13,7 @@ namespace trabalhoSOA
 
         public void getPage(int capacidade)
         {
-            Console.WriteLine("\nInsira o conjunto de páginas desejado, é necessário que insira um número por vez.");
+            Console.WriteLine("\nInsira o conjunto de páginas desejado, conforme o exemplo a seguir:\n1,2,3,1,5,6,3,8,7.\n");
             alg.cap = capacidade;
             try
             {
@@ -24,7 +24,8 @@ namespace trabalhoSOA
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Ocoreu um erro! Tente novamente");
+                Console.WriteLine("Ocorreu um erro! Tente novamente");
+                getPage(capacidade);
                 Console.ReadLine();
             }
         }
